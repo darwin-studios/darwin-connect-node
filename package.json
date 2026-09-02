@@ -1,0 +1,45 @@
+{
+  "name": "@darwinso/connect",
+  "version": "0.1.0",
+  "description": "Official TypeScript entry package for Darwin Connect",
+  "keywords": ["darwin", "connect", "sdk", "typescript"],
+  "homepage": "https://docs.darwin.so/connect/overview",
+  "bugs": {
+    "url": "https://github.com/darwin-studios/darwin-connect-node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darwin-studios/darwin-connect-node.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "npm run build && npm test",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@darwinso/sdk": ">=0.2.0 <1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "sideEffects": false
+}
