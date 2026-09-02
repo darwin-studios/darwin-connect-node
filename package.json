@@ -29,7 +29,7 @@
     "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
-    "@darwinso/sdk": ">=0.2.0 <1.0.0"
+    "@darwinso/sdk": ">=0.1.1 <1.0.0"
   },
   "devDependencies": {
     "typescript": "~5.9.3"
